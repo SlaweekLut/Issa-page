@@ -273,7 +273,6 @@ const schemePlusSizeSPB = schemeSPB.querySelector('.scheme__button--plus')
 const schemeMinusSizeSPB = schemeSPB.querySelector('.scheme__button--minus')
 const schemeCloseSPB = schemeSPB.querySelector('.scheme__button--close')
 const schemeContainerSPB = schemeSPB.querySelector('.scheme-container')
-
 let scaleSPB = 1
 
 const schemePlusSizeMoscow = schemeMoscow.querySelector('.scheme__button--plus')
