@@ -1,0 +1,1382 @@
+
+/* variables */ 
+$pinkRed: #FF006E
+$darkBlue: #001F73
+$white: #ffffff
+$greyBorder: #E2E2E2
+/* Main styles */ 
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	scroll-behavior: smooth
+
+h1
+	font-size: 2rem
+	font-family: 'GothamPro-black'
+	font-weight: 900
+h3
+	font-size: 22px
+	font-family: var(--gotham)
+	font-weight: 900
+	text-transform: uppercase
+.container
+	margin: 0 auto
+	max-width: 1290px
+.hidden
+	display: none !important
+.opacity
+	opacity: 0
+	visibility: hidden
+@media screen and (max-width: 1199px)
+	h1
+		font-size: 24px
+	h3
+		font-size: 18px
+// Hero
+.hero
+	&__slider
+		overflow: hidden
+	&__block
+		display: flex
+	&__btn
+		width: 100%
+		padding: 20px 0 !important
+		display: flex
+		justify-content: center
+		text-align: center !important
+		&:hover
+			background-color: #009BFF
+		&--blue
+			background-color: #009BFF !important
+			&:hover
+				background-color: $pinkRed !important
+	&__title
+		font-size: var(--h2) !important
+		line-height: 130%
+@media screen and (max-width: 1199px)
+	.hero
+		&__block
+			flex-direction: column
+// section
+
+.section
+	&__padding
+		padding: 100px 0
+	&__title
+		&--my
+			max-width: 1290px
+			margin: 0 auto !important
+			display: flex !important
+			line-height: 130%
+.blue-bg
+	background: url('../img/info-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	&__title
+		color: $white !important
+		max-width: 1044px
+		margin: 0 auto 100px !important
+		&::before,&::after
+			bottom: -25px
+		&::after
+			width: 50px !important
+			left: unset !important
+			margin-left: 155px
+			background-color: $pinkRed !important
+		&::before
+			width: 155px !important
+			left: unset !important
+			margin-right: 50px
+			background-color: #0B318F !important
+// services
+.services
+	background: url('../img/client-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	&__title
+		margin-bottom: 100px !important
+	&-row
+		display: flex
+		gap: 40px
+	&-item
+		max-width: 400px
+		width: 100%
+		&:first-child
+			.services-item__text
+				&:hover
+					text-decoration: none
+		&__text
+			display: block
+			margin-top: 37px
+			color: $darkBlue
+			&:hover
+				text-decoration: underline
+				text-underline-position: from-font
+				text-decoration-color: $pinkRed
+
+.line
+	&__title
+		&.red
+			&::after
+				background-color: $pinkRed
+@media screen and (max-width: 1196px)
+	.section
+		&__padding
+			padding: 50px 0
+	.services
+		&__title
+			margin-bottom: 50px !important
+		&__container
+			width: 100% !important
+			margin: 0 auto!important
+		&__padding
+			padding: 40px 0 !important
+		&-row
+			flex-wrap: wrap
+		&-item
+			max-width: 100%
+			&__text
+				padding: 0px 20px
+	.line
+		&__title
+			&::before,&::after
+				bottom: -25px
+			&::after
+				width: 50px !important
+				left: unset !important
+				margin-left: 155px
+			&::before
+				width: 155px !important
+				left: unset !important
+				margin-right: 50px
+
+// Info
+.info-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	column-gap: 20px
+	grid-row-gap: 60px
+.info-item
+	max-width: 300px
+	display: flex
+	align-items: center
+	flex-direction: column
+	margin: 0 auto
+	text-align: center
+	p
+		line-height: 130%
+
+	&__img
+		padding: 26px
+		border: 2px solid #0B318F
+		max-width: 160px
+		height: 160px
+		margin-bottom: 30px
+
+.mobile-info
+	position: relative
+	overflow: hidden
+	display: none
+
+@media screen and (max-width: 1196px)
+	.info
+		&__padding
+			padding: 50px 0
+		&__title
+			padding: 0px 20px !important
+			margin-bottom: 60px !important
+	.info-item
+		max-width: 100%
+		p
+			max-width: 300px
+	.info-grid
+		display: none
+	.mobile-info
+		display: block
+		& .slick-arrow
+			top: 42%
+			&.slick-next
+				right: 0
+
+// license
+.license
+	&__title
+		margin-bottom: 90px !important
+@media screen and (max-width: 1196px)
+	.license
+		margin-bottom: 30px !important
+		&.section__padding
+			padding: 30px 0
+	.license__slider
+		border-top: 0 !important
+		border-right: 0 !important
+		align-items: center
+		.swiper-wrapper
+			align-items: center
+		.swiper-slide
+			border-top: 1px solid #e2e2e2
+			border-right: 1px solid #e2e2e2
+// Tariffs
+.tariffs
+	&__title
+		margin-bottom: 85px !important
+		&::before
+			left: 18% !important
+		&::after
+			left: calc(18% + 155px) !important
+	&-row
+		display: flex !important
+	&__container
+		display: flex
+		flex-direction: column
+
+.tariffs-item
+	max-width: calc( 50% - 20px)
+	width: 100%
+	margin-right: 40px
+	&:last-child
+		margin-right: 0
+	&__container
+		border: 1px solid $greyBorder
+		border-top: 0
+		padding: 40px 23px 10px
+	&__row
+		display: flex
+		margin-bottom: 20px
+	&__icon-container
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 30px
+			height: 2px
+			bottom: -3px
+			left: calc(50% - 22px)
+			background-color: $pinkRed
+	&__icon
+		max-height: 45px
+		max-width: 45px
+		margin-right: 22px
+		position: relative
+
+	&__column
+		width: 100%
+		display: flex
+		flex-direction: column
+	&__title
+		text-transform: uppercase
+		color: #001f73
+		font-size: 18px
+		font-weight: 900
+	&__line
+		border: 0
+		height: 1px
+		background-color: #E2E2E2
+		color: #e2e2e2
+		margin: 5px 0
+	&__subtitle
+		font-size: 14px
+		color: #001f73
+
+	&__btn
+		max-width: 367px
+		width: 100%
+		background-color: #009BFF
+		text-transform: uppercase
+		color: #fff
+		padding: 12px 0
+		font-size: 18px
+		font-weight: 600
+		margin: 38px auto 0
+		display: flex
+		align-items: center
+		justify-content: center
+		&.red
+			background-color: $pinkRed
+		img
+			margin-left: 30px
+			border-radius: 50%
+			padding: 8px
+			width: 35px
+			height: 35px
+			border: 3px solid #fff
+.tariffs-header
+	background-color: $darkBlue
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	padding: 20px 0
+	&__img
+		max-width: 36px
+		max-height: 36px
+		margin-right: 12px
+	&__text
+		text-transform: uppercase
+		font-weight: 900
+		font-size: 22px
+
+@media screen and (max-width: 1196px)
+	.tariffs
+		&__title
+			margin-bottom: 35px !important
+		&-row
+			flex-direction: column
+	.tariffs-item
+		max-width: 100%
+		margin-right: 0
+		&:first-child
+			margin-bottom: 40px
+		&__btn
+			img
+				display: none
+	.tariffs-header
+		&__text
+			font-size: 18px
+		&__img
+			left: 5%
+
+// Advantages-product
+.advantages-product
+	&__container
+		display: block
+	&-grid
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		column-gap: 40px
+		grid-row-gap: 30px
+
+	&-item
+		display: flex
+		flex-direction: column
+		&__header
+			display: flex
+			align-items: center
+		&__num
+			width: 73px
+			height: 73px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 60px
+			font-weight: 600
+			border: 2px solid #0B318F
+			border-bottom: 2px solid $pinkRed
+		&__title
+			font-size: 22px
+			font-weight: bold
+			margin-left: 20px
+			text-transform: uppercase
+		&__text
+			margin-top: 30px
+
+.advantages-product-swiper
+	display: none
+	overflow: hidden
+	position: relative
+	padding-top: 100px
+	.slick-dots
+		left: 20px
+		top: 0
+		position: absolute
+		justify-content: start
+		align-items: start
+	.slick-arrow
+		top: 0
+		right: 20px
+		width: 50px
+		height: 50px
+		background-position: center center
+		background-size: 25px 25px
+		border: 1px solid #0B318F
+		border-bottom: 2px solid $pinkRed
+	.slick-prev
+		right: 90px
+
+@media screen and (max-width: 1196px)
+	.advantages-product
+		&__title
+			margin-bottom: 50px !important
+		&__container
+			display: none
+		&-item
+			padding: 0px 20px
+
+	.advantages-product-swiper
+		display: block
+
+// Clients
+
+.clients
+	background: url('../img/client-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+	&__padding
+
+	&__title
+		margin-bottom: 60px !important
+	&__container
+		border: 1px solid $greyBorder
+		padding: 54px 30px
+.clients-header
+	display: flex
+	margin-bottom: 80px
+	justify-content: center
+	&__title
+		font-size: 60px
+		font-weight: 900
+		position: relative
+		padding-right: 80px
+		margin-right: 54px
+		color: $darkBlue
+		text-transform: uppercase
+		&::first-letter
+			color: $pinkRed
+		&::after
+			content: ''
+			display: block
+			width: 1px
+			height: 78px
+			position: absolute
+			right: 0
+			top: 0
+			background: #e2e2e2
+	&__img
+		max-width: 312px
+.clients-text
+	line-height: 130%
+	color: $darkBlue
+	&__title
+		font-weight: 900
+		font-size: 22px
+	&__img
+		margin-right: 15px
+		max-width: 13px
+		max-height: 13px
+
+@media screen and (max-width: 1196px)
+	.clients
+		&__title
+			margin-bottom: 40px !important
+		&__container
+			border: 0
+			padding: 0 20px
+	.clients-header
+		display: flex
+		flex-direction: column
+		margin-bottom: 40px
+		&__title
+			font-size: 34px
+			padding-right: 0
+			margin-right: 0
+			text-align: center
+			margin-bottom: 24px
+			&::first-letter
+				color: $pinkRed
+			&::after
+				display: none
+		&__img
+			margin: 0 auto
+			max-width: 216px
+
+// How-Service
+.how-service
+	position: relative
+	&__row
+		display: flex
+.how-service-item
+	width: calc(50% - 20px)
+	width: 100%
+	margin-right: 40px
+	padding: 40px 27px
+	border: 2px solid #0B318F
+	border-bottom: 2px solid $pinkRed
+	&:last-child
+		margin-right: 0
+	&__text
+		display: flex
+		margin-bottom: 16px
+		span
+			display: block
+		&:last-child
+			margin-bottom: 0
+	&__icon
+		max-width: 14px
+		max-height: 14px
+		margin-right: 24px
+	&__btn
+		background-color: #009BFF
+		text-transform: uppercase
+		color: #fff
+		padding: 12px 20px
+		font-size: 18px
+		margin: 38px auto 0
+		display: flex
+		align-items: center
+		justify-content: center
+		&.red
+			background-color: $pinkRed
+		img
+			margin-left: 30px
+			border-radius: 50%
+			padding: 8px
+			width: 35px
+			height: 35px
+			border: 3px solid #fff
+.how-service-item-scheme
+	display: flex
+	align-items: center
+	width: calc(50% - 20px)
+	width: 100%
+	margin-right: 40px
+	margin-top: 50px
+	margin-bottom: 72px
+	&__img
+		width: 102px
+		height: 96px
+	&__column
+		margin-left: 37px
+		display: flex
+		height: 96px
+		flex-direction: column
+		justify-content: space-between
+	&__text
+		font-size: 15px
+		line-height: 21px
+		text-transform: uppercase
+		font-weight: 500
+	&__button
+		background: transparent
+	&:last-child
+		margin-right: 0
+
+.scheme-wrapper
+	width: 100%
+	height: 100vh
+	z-index: 10
+	padding: 20px 0
+	position: fixed
+	display: flex
+	top: 0
+	justify-content: center
+	overflow: auto
+	transform-origin: top
+	&::-webkit-scrollbar
+		width: 0
+		height: 0
+.scheme-container
+	transform-origin: top
+	transform: scale(1)
+	position: relative
+	padding-top: 0
+
+.scheme
+	height: calc(100vh - 40px)
+	width: auto
+	margin: 0 auto
+	box-shadow: 0px 0px 20px rgba(#000, 0.4)
+	&__buttons
+		position: absolute
+		top: 0
+		right: 0
+		background-color: $pinkRed
+		padding: 7px 10px
+		display: flex
+		align-items: center
+		height: 38px
+
+	&__button
+		display: flex
+		align-items: center
+		background: transparent
+		height: 16px
+		width: 16px
+		box-sizing: border-box
+		&--plus
+			width: 36px
+			padding: 0px 10px
+			margin: 0px 10px
+			border-right: 1px solid	#FF87B9
+			border-left: 1px solid	#FF87B9
+
+@media screen and (max-width: 1196px)
+	.how-service
+		margin-bottom: 50px
+		&__row
+			flex-direction: column
+			&--spec
+				padding: 40px 20px
+				border: 2px solid #0B318F
+				border-bottom: 2px solid $pinkRed
+		&__footer-img
+			margin-left: 10px
+	.how-service-item
+		width: 100%
+		max-width: 100%
+		padding: 0
+		margin-bottom: 0
+		margin-right: 0
+		border: 0
+		padding-bottom: 10px
+		&:last-child
+			padding-top: 0
+		&__btn
+			position: absolute
+			max-width: 100%
+			width: 100%
+			left: 0
+			bottom: -50px
+			font-size: 14px
+			span
+				max-width: 245px
+				text-align: left
+	.how-service-item-scheme
+		width: calc(50% - 20px)
+		width: 100%
+		margin-right: 0
+		margin-bottom: 15px
+		flex-direction: column
+		&__column
+			margin-left: 0
+		&__button
+			margin-bottom: 24px
+		&:last-child
+			margin-right: 0
+	.scheme
+		&__buttons
+			height: 24px
+			padding: 4px 8px
+		&__button
+			width: 12px
+			height: 12px
+			&--plus
+				width: 28px
+				padding: 0px 8px
+				margin: 0px 8px
+// Cloud
+.cloud
+
+	&__padding
+
+	&__title
+
+	&__subtitle
+		text-transform: uppercase
+		font-size: 24px
+		color: #001f73
+		text-align: center
+		margin: 6px 0
+	&__container
+		gap: 60px
+		display: flex
+		flex-direction: column
+		background: url('../img/cloud-bg-desk.png') no-repeat
+		background-position: center center
+		background-size: auto 100%
+		height: 552px
+		justify-content: center
+		padding-top: 150px
+	&__btn
+		max-width: 320px
+		width: 100%
+		background-color: #009BFF
+		text-transform: uppercase
+		color: #fff
+		padding: 12px 0
+		font-size: 18px
+		margin: 38px auto 0
+		display: flex
+		align-items: center
+		justify-content: center
+		&.red
+			background-color: $pinkRed
+		img
+			margin-left: 30px
+			border-radius: 50%
+			padding: 8px
+			width: 35px
+			height: 35px
+			border: 3px solid #fff
+
+.cloud-item
+	display: flex
+	align-items: center
+	justify-content: space-between
+	max-width: 670px
+	margin: 0 auto
+	gap: 25px
+	&__bullet
+		max-width: 46px
+		max-height: 46px
+	&__column
+		display: flex
+		flex-direction: column
+
+	&__title
+		line-height: 130%
+		margin-bottom: 7px
+		color: $darkBlue
+	&__text
+		max-width: 400px
+		color: $darkBlue
+
+	&--right
+		text-align: right
+		flex-direction: row-reverse
+		.cloud-item__column
+			align-items: end
+@media screen and (max-width: 1196px)
+	.cloud
+		&__subtitle
+			font-size: 15px
+			margin-bottom: 50px
+		&__container
+			gap: 20px
+			background: url('../img/cloud-bg-mobile.png') no-repeat
+			background-size: contain
+			background-position-x: -20px
+			padding-top: 0
+			height: 350px
+
+	.cloud-item
+		display: flex
+		align-items: center
+		justify-content: start
+		max-width: 670px
+		margin: 0 0
+		gap: 15px
+		&__bullet
+			max-width: 36px
+			max-height: 36px
+		&__column
+			display: flex
+			flex-direction: column
+
+		&--right
+			text-align: left
+			flex-direction: row
+			.cloud-item__column
+				align-items: start
+// How-Choises
+
+.how-choise
+	&__row
+		display: flex
+.how-choise-item
+	width: calc(50% - 20px)
+	width: 100%
+	margin-right: 40px
+	padding: 40px 27px
+	border: 2px solid #0B318F
+	border-bottom: 2px solid $pinkRed
+	&:last-child
+		margin-right: 0
+	&__text
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		span
+			display: block
+		&:last-child
+			margin-bottom: 0
+	&__icon
+		max-width: 22px
+		max-height: 22px
+		margin-right: 20px
+
+.how-choise-item-header
+	display: flex
+	justify-content: center
+	align-items: center
+	padding-bottom: 20px
+	margin-bottom: 32px
+	border-bottom: 2px solid #0B318F
+	height: 66px
+	&__icon
+		display: inline
+		max-height: 44px
+		max-width: 28px
+		padding-bottom: 6px
+		border-bottom: 2px solid $pinkRed
+		&--vr
+			max-width: 30px
+			max-height: 32px
+	span
+		font-size: 32px
+		text-transform: uppercase
+		margin-left: 22px
+		font-weight: bold
+
+@media screen and (max-width: 1196px)
+	.how-choise
+		&__row
+			flex-direction: column
+		&__footer-img
+			margin-left: 10px
+	.how-choise-item
+		width: 100%
+		max-width: 100%
+		padding: 40px 20px
+		margin-bottom: 40px
+		margin-right: 0
+		&:last-child
+			margin-bottom: 0
+	.how-choise-item-header
+		span
+			font-size: 24px
+// How-Work
+
+.how-work
+
+	&__padding
+
+	&__container
+		display: flex
+		justify-content: space-between
+	&__item
+		max-width: calc( 50% - 95px )
+		margin-right: 95px
+		&:last-child
+			margin-right: 0
+@media screen and (max-width: 1196px)
+	.how-work
+		display: none
+
+// Benefits
+.benefits
+	background: url('../img/client-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+	&__container
+		display: flex
+		gap: 25px
+		margin-top: 70px !important
+.benefits-item
+	display: flex
+	align-items: center
+	flex-direction: column
+	width: 100%
+	&__img
+		max-width: 100px
+		height: 100px
+		margin-bottom: 32px
+	&__text
+		color: $darkBlue
+
+@media screen and (max-width: 1196px)
+	.benefits
+		background-size: unset
+		background-position-x: -200px
+		&__container
+			flex-direction: column
+	.benefits-item
+		flex-direction: row
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+		&__img
+			margin-bottom: 0
+			margin-right: 32px
+
+// benefits-second
+
+.benefits-second
+
+	&__padding
+
+	&__title
+		color: $darkBlue !important
+		&::before
+			background-color: #E2E2E2 !important
+	&__container
+		display: flex
+		gap: 40px
+		justify-content: space-between
+	&-item
+		max-width: 383px
+		width: 100%
+		position: relative
+		&__img
+			background: #001F73
+			display: block
+		&__suptitle
+			padding: 12px 24px
+			text-transform: uppercase
+			font-size: 14px
+			font-weight: bold
+			border-top: 1px solid #0B318F
+			color: #fff
+			background-color: #001F73
+		&__info
+			position: relative
+			color: $darkBlue
+			padding: 24px 20px
+			height: 206px
+			border: 1px solid #E2E2E2
+			border-top: 0
+		&__btn
+			position: absolute
+			top: -1.354vw
+			right: 17px
+			display: flex
+			width: clamp(30px, 2.865vw, 55px)
+			height: clamp(30px, 2.865vw, 55px)
+			color: #fff
+			background-color: #FF006E
+			align-items: center
+			justify-content: center
+			img
+				max-width: 22px
+		&__title
+			font-size: 22px
+			font-weight: 900
+			margin-bottom: 23px
+			height: 60px
+		&__text
+.benefits-second-mobile
+	display: none
+@media screen and (max-width: 1196px)
+	.benefits-second
+		&__container
+			display: none
+	.benefits-second-mobile
+		display: block
+		.slick-arrow
+			background: #001F73
+			display: flex
+			width: 50px
+			height: 50px
+			text-align: center
+			align-items: center
+			background-position: center center
+			background-repeat: no-repeat
+			right: 20px
+			z-index: 10
+			&.slick-prev
+				right: 90px
+		.benefits-second-item
+			max-width: 100%
+			padding: 0px 20px 0px
+			&__btn
+				display: none
+
+// Calculator
+.calculator
+	background: $darkBlue
+	&__padding
+
+	&__title
+
+	&__container
+
+.calculator-radio-buttons
+	display: flex
+	align-items: center
+	border-bottom: 1px solid #2D48A8
+
+	&__title
+		font-size: 18px
+		font-weight: 900
+		white-space: nowrap
+		text-transform: uppercase
+	&__item
+		max-width: 100%
+		width: 100%
+		font-size: 18px
+		font-weight: 600
+		text-align: center
+		margin-left: 10px
+		text-transform: uppercase
+		&:nth-child(2)
+			margin-left: 100px
+		span,a
+			background-color: #0B318F
+			display: block
+			padding: 16px 0
+		input
+			appearance: none
+			position: absolute
+		input:checked + span
+			background-color: $pinkRed
+.calculator-communicative-resource-internet
+	padding: 40px 0
+	margin-top: 0 !important
+	display: flex
+	align-items: center
+	.calculator-block__header
+		flex-direction: row !important
+		max-width: 100% !important
+		align-items: center
+	&__title
+		margin-bottom: 0 !important
+		max-width: 230px
+		width: 100%
+		display: inline-block
+		margin-right: 50px
+
+	&__subtitle
+		max-width: max-content
+		width: 100%
+		margin-bottom: 0 !important
+		display: inline-block
+	&__row
+		display: flex
+	.calculator-block__price
+		display: inline-block
+		margin: 0 !important
+	&__column
+		max-width: max-content
+		margin-left: auto
+
+.calculator-communicative-resource
+	display: flex
+	margin-top: 56px
+	border-bottom: 1px solid #2D48A8
+	&__title
+		width: 170px
+		line-height: 130%
+		font-weight: 900
+	&__subtitle
+
+.calculator-checkbox
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 25px
+	max-width: 25px
+	width: 100%
+	min-height: 26px
+	max-height: 26px
+	border: 2px solid $pinkRed
+	margin-right: 20px
+	input
+		position: absolute
+		appearance: none
+
+	img
+		max-width: 12px
+		display: none
+	input:checked + img
+		display: block
+.calculator-block
+	&__price
+		font-weight: 600
+		font-size: 18px
+		text-transform: uppercase
+		text-align: right
+		margin-top: 30px
+		margin-bottom: 18px
+		display: flex
+		flex-direction: column
+		&-hint
+			font-size: 16px
+			color: #4770d4
+			text-align: left
+			line-height: 130%
+			max-width: 688px
+
+		&--without
+			font-weight: 400
+			color: #4770d4
+			text-decoration: line-through
+
+		&--red
+			color: $pinkRed
+	&__header
+		display: flex
+		flex-direction: column
+		max-width: 230px
+		margin-right: 50px
+
+	&__title
+		font-size: 18px
+		font-weight: 900
+		margin-bottom: 30px
+		text-transform: uppercase
+	&__subtitle
+		font-size: 16px
+	&__column-input
+		display: flex
+		flex-direction: column
+		margin-right: 54px
+		max-width: 553px
+		width: 100%
+	&__row-input-count
+		display: flex
+		max-width: 144px
+		align-items: center
+		width: 100%
+		justify-content: space-between
+		padding: 10px 17px
+		background-color: #0B318F
+	&__row-input
+		display: flex
+		flex-direction: row
+		width: 100%
+		margin-bottom: 5px
+	&__column
+		display: flex
+		flex-direction: column
+		width: 100%
+	&__row
+		display: flex
+		flex-direction: row
+	&__minus, &__plus
+		cursor: pointer
+		max-width: 14px
+	&__count
+		background: transparent
+		text-align: center
+		border: 0
+		outline: none
+		color: #fff
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+
+.calculator-input
+	width: 100%
+	&__title
+		max-width: clamp(160px, 8.854vw, 170px)
+		width: 100%
+		margin-right: 40px
+		font-weight: normal
+	&__input
+		width: 100%
+	&__value
+		width: 100%
+		margin-top: 10px
+		span:nth-child(1)
+			margin-left: 0
+		span:nth-child(2)
+			margin-left: 24%
+		span:nth-child(3)
+			margin-left: 17%
+		span:nth-child(4)
+			margin-left: 14%
+		span:nth-child(5)
+			float: right
+
+.calculator-footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 40px
+	&__button
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #009BFF
+		height: 55px
+		font-weight: 500
+		text-transform: uppercase
+		color: #fff
+		font-size: 18px
+		max-width: 330px
+		width: 330px
+	&__result
+		padding: 6px 30px 6px
+		color: #fff
+		font-size: 24px
+		font-weight: 500
+		text-transform: uppercase
+		border: 2px solid #0B318F
+		border-bottom: 3px solid $pinkRed
+		margin-bottom: 30px
+		text-align: center
+		min-width: 330px
+		.calculator-block__price--without
+			font-size: 18px
+	&__column
+		display: flex
+		flex-direction: column
+		&:last-child
+			align-items: flex-end
+	&__text
+		text-transform: uppercase
+		font-size: 24px
+		font-weight: 500
+		margin-bottom: 36px
+
+.calculator-form
+	max-width: 640px !important
+	// width: 100%
+	margin: 0 auto
+	display: flex
+	flex-direction: column
+	&__input
+		font-size: 18px
+		font-weight: 500
+		line-height: 130%
+		text-transform: uppercase
+		background: transparent
+		outline: none
+		border: 0
+		color: #fff
+		position: relative
+		width: 100%
+		margin-left: 5px
+		resize: none
+		&::placeholder
+			color: #fff
+	&__label
+		padding: 12px 0
+		display: flex
+		position: relative
+		border-bottom: 2px solid #2D48A8
+		color: $pinkRed
+	&__row
+		margin: 50px 0
+		display: flex
+		&--buttons
+			gap: 28px
+	&__column
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__capcha
+		margin-top: 20px
+		height: 70px
+		width: 263px
+	&__checkbox-text
+		font-size: 16px
+		margin-left: 23px
+
+	&__button
+		max-width: 50%
+		height: 55px
+		width: 100%
+		background-color: #009BFF
+		text-transform: uppercase
+		color: #fff
+		font-size: 18px
+		font-weight: 500
+		display: flex
+		align-items: center
+		justify-content: center
+		&.red
+			background-color: $pinkRed
+		img
+			margin-right: 30px
+			border-radius: 50%
+			padding: 8px
+			width: 35px
+			height: 35px
+			border: 2px solid #fff
+			transform: rotate(180deg)
+
+	textarea
+		height: 100px
+
+@media screen and (max-width: 1196px)
+	.calculator-footer
+		flex-direction: column-reverse
+		&__button
+			padding: 16px 0
+			width: 320px
+			text-align: center
+		&__result
+			padding: 16px 0
+			text-align: center
+			border: 0
+			background-color: $pinkRed
+			margin-bottom: 20px
+			width: 100%
+			opacity: 1 !important
+			visibility: visible !important
+			.calculator-block__price--without
+				display: none
+		&__column:first-child
+			display: none
+	.calculator-radio-buttons
+		flex-direction: column
+		border-bottom: 0px
+		&__title
+			margin-bottom: 30px
+		&__item
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+			margin-left: 0
+			&:nth-child(2)
+				margin-left: 0
+	.calculator-communicative-resource-internet
+		flex-direction: column
+		align-items: start
+		.calculator-block__header
+			display: flex
+			flex-direction: column !important
+			align-items: start
+		&__column
+			text-align: center
+			margin: 0 auto
+		&__title
+			margin-bottom: 28px !important
+		.calculator-block__price
+			margin: 0 !important
+	.calculator-communicative-resource
+		flex-wrap: wrap
+	.calculator-block
+		&__price
+			margin: 60px 0px 30px !important
+			text-align: center
+
+		&__header
+			margin-bottom: 30px
+			margin-right: 0
+		&__subtitle
+			font-size: 16px
+		&__column-input
+			display: none
+		&__row-input
+			display: flex
+			flex-direction: row
+			width: 100%
+			margin-bottom: 5px
+		&__column
+			display: flex
+			flex-direction: column
+			width: 100%
+		&__row
+			display: flex
+			flex-direction: row
+		&__minus, &__plus
+			max-width: 14px
+	.calculator-input
+		&__title
+			margin-right: 15px
+		&__input
+			display: none
+		&__value
+			display: none
+@media screen and (max-width: 576px)
+	.calculator-form
+		&__button
+			max-width: 100%
+		&__row--buttons
+			gap: 10px
+			flex-direction: column
+	.calculator-footer
+		width: 100%
+		&__column
+			width: 100%
+		&__result
+			min-width: 0px
+			max-width: 100%
+			width: 100%
+			margin: 0 auto 20px
+		&__button
+			max-width: 100%
+			margin: 0 auto
+			width: 100%
+/** Footer **/
+.footer-middle__title
+	margin-bottom: 25px !important
