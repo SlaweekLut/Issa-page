@@ -54,6 +54,7 @@ h3
 	&__title
 		font-size: var(--h2) !important
 		line-height: 130%
+
 @media screen and (max-width: 1199px)
 	.hero
 		&__block
@@ -121,6 +122,7 @@ h3
 		&.red
 			&::after
 				background-color: $pinkRed
+
 @media screen and (max-width: 1196px)
 	.section
 		&__padding
@@ -222,15 +224,19 @@ h3
 .tariffs
 	&__title
 		margin-bottom: 85px !important
-		&::before
-			left: 18% !important
-		&::after
-			left: calc(18% + 155px) !important
+
 	&-row
 		display: flex !important
 	&__container
 		display: flex
 		flex-direction: column
+
+@media screen and (min-width: 1197px)
+	.tariffs__title
+		&::before
+			left: 18% !important
+		&::after
+			left: calc(18% + 155px) !important
 
 .tariffs-item
 	max-width: calc( 50% - 20px)
@@ -572,18 +578,22 @@ h3
 .scheme-container
 	transform-origin: top
 	transform: scale(1)
+	width: 300px
 	position: relative
 	padding-top: 0
 
 .scheme
-	height: calc(100vh - 40px)
-	width: auto
+	width: 100%
 	margin: 0 auto
 	box-shadow: 0px 0px 20px rgba(#000, 0.4)
+	position: relative
+	top: 0
+	left: 0
 	&__buttons
 		position: absolute
 		top: 0
 		right: 0
+		z-index: 1
 		background-color: $pinkRed
 		padding: 7px 10px
 		display: flex
@@ -1272,6 +1282,9 @@ h3
 			height: 35px
 			border: 2px solid #fff
 			transform: rotate(180deg)
+
+	&__text > a
+		text-decoration: underline
 
 	textarea
 		height: 100px

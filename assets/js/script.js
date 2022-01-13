@@ -266,6 +266,8 @@ closeCalculatorForm.addEventListener('click', () => {
 const schemeWrapper = document.querySelectorAll('.scheme-wrapper')
 const schemeMoscow = document.querySelector('.scheme--moscow')
 const schemeSPB = document.querySelector('.scheme--spb')
+const schemeImgMoscow = document.querySelector('.scheme__img--moscow')
+const schemeImgSPB = document.querySelector('.scheme__img--spb')
 const schemeButtonMoscow = document.getElementById('scheme-moscow')
 const schemeButtonSPB = document.getElementById('scheme-spb')
 
@@ -273,13 +275,13 @@ const schemePlusSizeSPB = schemeSPB.querySelector('.scheme__button--plus')
 const schemeMinusSizeSPB = schemeSPB.querySelector('.scheme__button--minus')
 const schemeCloseSPB = schemeSPB.querySelector('.scheme__button--close')
 const schemeContainerSPB = schemeSPB.querySelector('.scheme-container')
-let scaleSPB = 1
+let scaleSPB = 300
 
 const schemePlusSizeMoscow = schemeMoscow.querySelector('.scheme__button--plus')
 const schemeMinusSizeMoscow = schemeMoscow.querySelector('.scheme__button--minus')
 const schemeCloseMoscow = schemeMoscow.querySelector('.scheme__button--close')
 const schemeContainerMoscow = schemeMoscow.querySelector('.scheme-container')
-let scaleMoscow = 1
+let scaleMoscow = 300
 
 schemeButtonMoscow.addEventListener('click', () => {
 	schemeMoscow.classList.remove('hidden')
@@ -288,12 +290,14 @@ schemeCloseMoscow.addEventListener('click', () => {
 	schemeMoscow.classList.add('hidden')
 })
 schemePlusSizeMoscow.addEventListener('click', () => {
-	scaleMoscow += 0.2
-	schemeContainerMoscow.style.transform = `scale(${scaleMoscow})`
+	scaleMoscow += 150
+	schemeContainerMoscow.style.width = `${scaleMoscow}px`
 })
 schemeMinusSizeMoscow.addEventListener('click', () => {
-	scaleMoscow -= 0.2
-	schemeContainerMoscow.style.transform = `scale(${scaleMoscow})`
+	if(schemeContainerMoscow.style.width !== '150px') {
+		scaleMoscow -= 150
+		schemeContainerMoscow.style.width = `${scaleMoscow}px`
+	}
 })
 
 schemeButtonSPB.addEventListener('click', () => {
@@ -305,10 +309,12 @@ schemeCloseSPB.addEventListener('click', () => {
 	schemeSPB.classList.add('hidden')
 })
 schemePlusSizeSPB.addEventListener('click', () => {
-	scaleSPB += 0.2
-	schemeContainerSPB.style.transform = `scale(${scaleSPB})`
+	scaleSPB += 150
+	schemeContainerSPB.style.width = `${scaleSPB}px`
 })
 schemeMinusSizeSPB.addEventListener('click', () => {
-	scaleSPB -= 0.2
-	schemeContainerSPB.style.transform = `scale(${scaleSPB})`
+	if(schemeContainerSPB.style.width !== '150px') {
+		scaleSPB -= 150
+		schemeContainerSPB.style.width = `${scaleSPB}px`
+	}
 })
